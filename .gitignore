@@ -1,0 +1,42 @@
+# Nice-TTS Ignore File
+# Files and patterns listed here will be excluded from transcription processing
+# Similar to .gitignore syntax
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.bak
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore specific file names
+test_audio.wav
+sample.m4a
+
+# Ignore directories
+backup/
+temp/
+old_transcriptions/
+
+# Ignore files with specific patterns
+*test*
+*sample*
+*demo*
+
+# Ignore large files (you can specify size-based patterns)
+# Files larger than 100MB will be skipped automatically by the system
+
+# Ignore files from specific applications
+*.audacity
+*.project
+
+# Add your custom patterns below...
+.bmad-core/
+.claude/
+.venv/
+data/
+tests/
+transcriptions/
+
