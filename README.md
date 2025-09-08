@@ -64,6 +64,7 @@ nice-tts/
 ## Features
 
 -   **AI-Powered Transcription**: Uses OpenAI's Whisper models to transcribe audio files. Defaults to Chinese.
+-   **Multi-Format Support**: Single file and batch processing support 9+ audio formats (.wav, .mp3, .m4a, .flac, .ogg, .wma, .aac, .aiff, .au) by default.
 -   **Phone Call Mode**: Specialized mode for telephone recordings with fp16 acceleration and contextual prompts.
 -   **Batch Processing**: Process a single audio file or all supported audio files in a directory.
 -   **Smart Text Formatting**: Automatically adds punctuation and paragraph structure for improved readability.
@@ -201,11 +202,14 @@ python -m nice_tts info
 # Check GPU support
 python -m nice_tts check-gpu
 
-# Process a single Chinese audio file
+# Process a single Chinese audio file (any supported format)
 python -m nice_tts process audio.wav
+python -m nice_tts process meeting.mp3
+python -m nice_tts process recording.m4a
 
-# Process a whole directory with custom output
+# Process a whole directory with multiple audio formats
 python -m nice_tts process audio_folder/ --output-dir results/
+# Automatically finds: .wav, .mp3, .m4a, .flac, .ogg, .wma, .aac, .aiff, .au files
 
 # Process English audio
 python -m nice_tts process english.wav --language en
